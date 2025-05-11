@@ -4,6 +4,7 @@
 #include "fonctions.h"
 #include "modes.h"
 #include<time.h>
+#include <stdlib.h>
 
 int main(){
 
