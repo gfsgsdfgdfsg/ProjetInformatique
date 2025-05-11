@@ -26,4 +26,4 @@ Le système de tour est inspiré du jeu raid  : plus un personnage est rapide, p
 Utilise `gcc` pour compiler le projet :
 
 ```bash
-gcc -o combat main.c combat.c
+gcc -o combat main.c combat.c -lm
