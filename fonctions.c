@@ -1,5 +1,4 @@
 #include "fonctions.h"
-#include <string.h>
 
 
 void initEquipes(Equipe *e1, Equipe *e2) {
