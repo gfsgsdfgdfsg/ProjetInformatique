@@ -1,29 +1,12 @@
-# ProjetInformatique
-## 📌 Description
+Lucas Leichnig, Amaury, Idris Dumas
+MI4-K
 
-Ce projet est un petit jeu en C mettant en scène **deux équipes de trois personnages** s'affrontant dans un système de **combat au tour par tour**, basé sur la **vitesse d'action (vitact)**.
+Rapport de projet : 
 
-Chaque personnage possède des statistiques personnalisées.
+Lors du choix du sujet, notre équipe s’est tournée vers le projet “CY-fighters”. Tous les membres étaient enthousiastes à l’idée de créer un jeu de combat. Notre première étape fut d’établir une liste de personnages et de leurs compétences. Nous avons ensuite dressé la liste des choses à faire et nous nous sommes réparti les tâches.
 
-Le système de tour est inspiré du jeu raid  : plus un personnage est rapide, plus il agit souvent.
+Lucas était en charge de l’interface dans le terminal, de certaines fonctions et du système de tours. Amaury devait travailler sur les compétences et les structures. Et Idris était chargé de mettre en place la fonction main et lier toutes les fonctions ensemble afin de concrétiser le jeu. 
 
-## 🛠️ Fonctionnalités principales
+Le premier problème que nous avons rencontré était dans la fonction permettant le choix des équipes. La fonction devait initialement demander à l’utilisateur de choisir ces personnages puis devait automatiquement remplir la deuxième équipe avec les personnages restants. Cependant, la deuxième équipe finissait systématiquement par être composée 3 fois du même personnage. Pour pallier ce problème, nous avons changé la fonction : elle demande maintenant à l’utilisateur de choisir ses personnages et ceux de l’adversaire.
 
-- Calcul dynamique du prochain attaquant selon la vitesse accumulée.
-- Gestion de deux équipes (`Equipe`), chacune composée de trois personnages (`Perso`).
-- Système de mise à jour de la vitesse à chaque tour.
-
-## 📁 Structure des fichiers
-
-- `main.c` — point d'entrée du programme, logique principale de la boucle de combat.
-- `foncions.c` — contient la logique de calcul de la vitesse et du choix de l’attaquant.
-- `modes.c` — boucles permettant de faire fonctionner le mode solo.
-- `capacites.c` — contient la logique des différentes capacités des personnages.
-- `structures.h` — contient les structures du programme.
-
-## ▶️ Compilation
-
-Utilise `gcc` pour compiler le projet :
-
-```bash
-gcc -o combat main.c -ln
+Un autre problème est survenu au niveau du système de tours. Le personnage ayant la vitesse la plus élevée jouait en boucle. Pour régler cela, nous avons repenser le système de vitesse et maintenant, c'est le personnage le plus de vitesse actuelle qui joue si elle est au dessus de 150. Ce nouveau système de vitesse permet donc de faire légèrement jouer plus les personnages les plus rapides tout le long de la partie. 
